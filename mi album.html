@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Álbum</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    :root{--size: min(80vmin,800px)}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px;background:#02f7ea;color:#ff1c8d}
+    h1{margin:0;font-size:1.25rem}
+    .preview-wrap{width:var(--size);height:var(--size);position:relative;background:#87399e;border-radius:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,.08);overflow:hidden}
+    .heart{position:relative;width:85%;height:85%;}
+    .heart img{
+      position:absolute;
+      display:block;
+      width:18%;
+      height:18%;
+      object-fit:cover;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,.18);
+      transition:transform .25s ease;
+      transform-origin:center center;
+      cursor:pointer;
+    }
+    /* Efecto hover en PC */
+    .heart img:hover{
+      transform:scale(1.3) translateY(-4px);
+      z-index:30;
+    }
+    /* Efecto al hacer click en celular */
+    .heart img.active{
+      transform:scale(1.3) translateY(-4px);
+      z-index:30;
+    }
+
+    .p1{left:50%; top:6%; transform:translate(-50%,-50%);}  
+    .p2{left:32%; top:12%; transform:translate(-50%,-50%);} 
+    .p3{left:68%; top:12%; transform:translate(-50%,-50%);} 
+    .p4{left:18%; top:26%; transform:translate(-50%,-50%);} 
+    .p5{left:46%; top:22%; transform:translate(-50%,-50%);} 
+    .p6{left:82%; top:26%; transform:translate(-50%,-50%);} 
+    .p7{left:10%; top:44%; transform:translate(-50%,-50%);} 
+    .p8{left:30%; top:42%; transform:translate(-50%,-50%);} 
+    .p9{left:50%; top:38%; transform:translate(-50%,-50%);} 
+    .p10{left:70%; top:42%; transform:translate(-50%,-50%);} 
+    .p11{left:90%; top:44%; transform:translate(-50%,-50%);} 
+    .p12{left:30%; top:60%; transform:translate(-50%,-50%);} 
+    .p13{left:50%; top:66%; transform:translate(-50%,-50%);} 
+    .p14{left:70%; top:60%; transform:translate(-50%,-50%);} 
+    .p15{left:50%; top:86%; transform:translate(-50%,-50%);} 
+
+    .video-wrap{width:var(--size);display:flex;justify-content:center;margin-top:10px}
+    video{max-width:100%;height:auto;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+  </style>
+</head>
+<body>
+  <h1>El álbum de mis fotos y video favoritas</h1>
+  <div class="preview-wrap">
+    <div class="heart">
+      <img src="./img/foto1.jpeg" alt="1" class="p1">
+      <img src="./img/foto2.jpeg" alt="2" class="p2">
+      <img src="./img/foto3.jpeg" alt="3" class="p3">
+      <img src="./img/foto4.jpeg" alt="4" class="p4">
+      <img src="./img/foto5.jpeg" alt="5" class="p5">
+      <img src="./img/foto6.jpeg" alt="6" class="p6">
+      <img src="./img/foto7.jpeg" alt="7" class="p7">
+      <img src="./img/foto8.jpeg" alt="8" class="p8">
+      <img src="./img/foto9.jpeg" alt="9" class="p9">
+      <img src="./img/foto10.jpeg" alt="10" class="p10">
+      <img src="./img/foto11.jpeg" alt="11" class="p11">
+      <img src="./img/foto12.jpeg" alt="12" class="p12">
+      <img src="./img/foto13.jpeg" alt="13" class="p13">
+      <img src="./img/foto14.jpeg" alt="14" class="p14">
+      <img src="./img/foto15.jpeg" alt="15" class="p15">
+    </div>
+  </div>
+
+  <div class="video-wrap">
+    <video controls>
+      <source src=".img/video1.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+</body>
+</html>
+
+
